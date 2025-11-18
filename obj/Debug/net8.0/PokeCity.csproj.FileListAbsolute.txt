@@ -30,3 +30,5 @@ C:\Users\ariff\source\repos\PokeCity\PokeCity\obj\Debug\net8.0\refint\PokeCity.d
 C:\Users\ariff\source\repos\PokeCity\PokeCity\obj\Debug\net8.0\PokeCity.pdb
 C:\Users\ariff\source\repos\PokeCity\PokeCity\obj\Debug\net8.0\PokeCity.genruntimeconfig.cache
 C:\Users\ariff\source\repos\PokeCity\PokeCity\obj\Debug\net8.0\ref\PokeCity.dll
+C:\Users\ariff\source\repos\PokeCity\PokeCity\obj\Debug\net8.0\PokeCity.sourcelink.json
+C:\Users\ariff\source\repos\PokeCity\PokeCity\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

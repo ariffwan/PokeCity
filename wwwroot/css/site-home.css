@@ -1,5 +1,53 @@
-/* GLOBAL */
-/* CLEAN WHITE HEADER WITH BRAND HIGHLIGHT */
+﻿/* ============================================================
+   GLOBAL LAYOUT + BODY
+============================================================ */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background: linear-gradient(180deg, #ffefba, #ffffff);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Background decorative shapes */
+body::before {
+    content: "";
+    position: fixed;
+    top: -40px;
+    left: -40px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -60px;
+    right: -60px;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 105, 180, 0.25);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* ============================================================
+   HEADER + NAVBAR
+============================================================ */
 header {
     position: sticky;
     top: 0;
@@ -7,114 +55,65 @@ header {
 }
 
 .navbar {
-    background: #ffffff; /* base white */
-    border-radius: 0 0 12px 12px; /* gentle curve */
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* subtle shadow */
+    background: #ffffff;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
     font-weight: 800;
-    color: #ffcb05; /* cheerful yellow brand name */
+    color: #ffcb05;
     font-size: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* subtle text depth */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .navbar-nav .nav-link {
-    color: #000000; /* black links for readability */
+    color: #000000;
     font-weight: 600;
     margin: 0 0.5rem;
     transition: transform 0.2s, color 0.2s;
 }
 
     .navbar-nav .nav-link:hover {
-        color: #ffcb05; /* highlight on hover matches brand */
+        color: #ffcb05;
         transform: scale(1.05);
     }
 
-/* Optional subtle floating shapes for playful touch */
-header::before {
+/* header floating circles */
+header::before,
+header::after {
     content: "";
     position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+header::before {
     top: -10px;
     left: 10px;
     width: 50px;
     height: 50px;
-    background: rgba(255, 105, 180, 0.15); /* pinkish soft circle */
-    border-radius: 50%;
-    z-index: -1;
+    background: rgba(255, 105, 180, 0.15);
 }
 
 header::after {
-    content: "";
-    position: absolute;
     top: 5px;
     right: 15px;
     width: 40px;
     height: 40px;
-    background: rgba(255, 215, 0, 0.15); /* yellow soft circle */
-    border-radius: 50%;
-    z-index: -1;
+    background: rgba(255, 215, 0, 0.15);
 }
 
-html, body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    color: #333;
-    background: linear-gradient(180deg, #ffefba, #ffffff);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* ensure body takes full viewport height */
-}
-
-main {
-    flex: 1; /* take all available space so footer stays at bottom */
-}
-
-footer {
-    flex-shrink: 0; /* keep footer at natural height */
-    /* remove margin-bottom: auto */
-}
-
-
-    /* Add playful background shapes */
-    body::before {
-        content: "";
-        position: fixed;
-        top: -40px;
-        left: -40px;
-        width: 300px;
-        height: 300px;
-        background: rgba(255, 215, 0, 0.3);
-        border-radius: 50%;
-        z-index: -1;
-    }
-
-    body::after {
-        content: "";
-        position: fixed;
-        bottom: -60px;
-        right: -60px;
-        width: 350px;
-        height: 350px;
-        background: rgba(255, 105, 180, 0.25);
-        border-radius: 50%;
-        z-index: -1;
-    }
-
-
-/* HERO SECTION */
+/* ============================================================
+   HERO SECTION
+============================================================ */
 .hero {
     height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* cheerful blue sky gradient */
     background: linear-gradient(135deg, #6ec9ff, #9fe2ff);
     position: relative;
     overflow: hidden;
@@ -154,7 +153,7 @@ footer {
     }
 }
 
-/* text styling */
+/* hero text */
 .hero-content h1 {
     font-size: 3.2rem;
     color: #fff;
@@ -178,17 +177,18 @@ footer {
     border-radius: 8px;
     color: #000;
     font-weight: bold;
+    border: 3px solid #2a75bb;
     text-decoration: none;
     transition: 0.2s ease;
-    border: 3px solid #2a75bb;
 }
 
     .btn:hover {
         background: #ffe066;
     }
 
-
-/* INTRO SECTION */
+/* ============================================================
+   INTRO SECTION
+============================================================ */
 .intro {
     padding: 50px 20px;
     max-width: 900px;
@@ -201,8 +201,9 @@ footer {
         color: #2a75bb;
     }
 
-
-/* WHAT'S NEW */
+/* ============================================================
+   WHAT'S NEW
+============================================================ */
 .whats-new {
     padding: 40px 20px;
 }
@@ -227,7 +228,6 @@ footer {
     box-shadow: 0 5px 12px rgba(0,0,0,0.1);
     border: 3px solid #ffcb05;
     transition: transform 0.2s ease;
-    margin-bottom: 10px;
 }
 
     .new-card:hover {
@@ -240,8 +240,9 @@ footer {
         margin-bottom: 10px;
     }
 
-
-/* FEATURED SECTION */
+/* ============================================================
+   FEATURED
+============================================================ */
 .featured {
     padding: 50px 20px;
     text-align: center;
@@ -278,10 +279,12 @@ footer {
         border-radius: 10px;
     }
 
-
+/* ============================================================
+   COLLECTION (UPDATED TO 5 CARDS PER ROW, BIGGER)
+============================================================ */
 .collection {
     padding: 50px 20px;
-    max-width: 1000px; /* 4 cards x 150px + gaps */
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -294,20 +297,20 @@ footer {
 
 .collection-grid {
     display: grid;
-    grid-template-columns: repeat(4, 150px); /* exactly 4 cards per row */
-    gap: 20px; /* space between cards */
-    justify-content: center; /* center grid in container */
+    grid-template-columns: repeat(5, 1fr); /* ⭐ FIVE CARDS PER ROW */
+    gap: 25px;
+    justify-items: center;
 }
 
 .collection-card {
-    width: 150px;
-    height: 210px; /* Pok�mon card size */
+    width: 180px;
+    height: 270px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 5px 12px rgba(0,0,0,0.1);
     border: 3px solid #ffcb05;
     text-align: center;
-    padding: 5px;
+    padding: 8px;
     transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -321,20 +324,45 @@ footer {
 
     .collection-card img {
         width: 100%;
-        height: auto; /* keeps aspect ratio */
         border-radius: 8px;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
     }
 
     .collection-card h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
         color: #2a75bb;
-        margin: 3px 0;
+        margin: 4px 0;
     }
 
-/* POPUP BACKGROUND */
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 992px) {
+    .collection-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .collection-card {
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* ============================================================
+   POPUP / CARD PREVIEW
+============================================================ */
 .card-popup {
-    display: none; /* hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -353,7 +381,7 @@ footer {
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    width: 300px; /* enlarged card size */
+    width: 300px;
     max-width: 90%;
     animation: scaleUp 0.3s ease forwards;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -402,3 +430,108 @@ footer {
         opacity: 1;
     }
 }
+
+/* ALBUM SECTION */
+.album-section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+    .album-section h2 {
+        color: #2a75bb;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 large card per row */
+    gap: 30px;
+    justify-content: center;
+}
+
+.album-card {
+    width: 100%;
+    max-width: 600px; /* nicer, larger card */
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    border: 3px solid #ffcb05;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    margin: auto;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+    .album-card:hover {
+        transform: scale(1.03);
+    }
+
+    .album-card img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+
+/* popup for album (bigger) */
+.album-popup {
+    width: 600px;
+    max-width: 95%;
+}
+
+/* FLOATING HOT AIR BALLOON BACKGROUND */
+.hot-air-balloon {
+    position: fixed;
+    bottom: 10%;
+    right: -120px; /* starts slightly off-screen */
+    width: 180px;
+    height: 260px;
+    background: url('/img/pokeball.png') no-repeat center/contain;
+    opacity: 0.85;
+    z-index: -1;
+    animation: balloonFloat 5s ease-in-out infinite, balloonDrift 10s linear infinite;
+}
+
+/* Up-down floating */
+@keyframes balloonFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Slow side-to-side drifting */
+@keyframes balloonDrift {
+    0% {
+        right: -120px;
+    }
+
+    50% {
+        right: 500px;
+    }
+
+    100% {
+        right: -120px;
+    }
+}
+
+/* Mobile balloon resize */
+@media (max-width: 768px) {
+    .hot-air-balloon {
+        width: 130px;
+        height: 190px;
+        bottom: 5%;
+        opacity: 0.75;
+    }
+}
+

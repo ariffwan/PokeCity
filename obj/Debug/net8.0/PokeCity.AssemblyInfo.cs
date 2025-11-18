@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokeCity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+287e12ba96a0819015bc932439c68376918adacf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokeCity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokeCity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
