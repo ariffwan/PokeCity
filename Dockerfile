@@ -1,7 +1,7 @@
 # Dockerfile for PokeCity ASP.NET Core app
 
 # STEP 1: Build stage
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copy csproj and restore dependencies
@@ -13,7 +13,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # STEP 2: Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 
 # Copy published files from build stage
