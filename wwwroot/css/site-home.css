@@ -1,0 +1,404 @@
+/* GLOBAL */
+/* CLEAN WHITE HEADER WITH BRAND HIGHLIGHT */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    background: #ffffff; /* base white */
+    border-radius: 0 0 12px 12px; /* gentle curve */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* subtle shadow */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: #ffcb05; /* cheerful yellow brand name */
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* subtle text depth */
+}
+
+.navbar-nav .nav-link {
+    color: #000000; /* black links for readability */
+    font-weight: 600;
+    margin: 0 0.5rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #ffcb05; /* highlight on hover matches brand */
+        transform: scale(1.05);
+    }
+
+/* Optional subtle floating shapes for playful touch */
+header::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 105, 180, 0.15); /* pinkish soft circle */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 215, 0, 0.15); /* yellow soft circle */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background: linear-gradient(180deg, #ffefba, #ffffff);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ensure body takes full viewport height */
+}
+
+main {
+    flex: 1; /* take all available space so footer stays at bottom */
+}
+
+footer {
+    flex-shrink: 0; /* keep footer at natural height */
+    /* remove margin-bottom: auto */
+}
+
+
+    /* Add playful background shapes */
+    body::before {
+        content: "";
+        position: fixed;
+        top: -40px;
+        left: -40px;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 215, 0, 0.3);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    body::after {
+        content: "";
+        position: fixed;
+        bottom: -60px;
+        right: -60px;
+        width: 350px;
+        height: 350px;
+        background: rgba(255, 105, 180, 0.25);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+
+/* HERO SECTION */
+.hero {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* cheerful blue sky gradient */
+    background: linear-gradient(135deg, #6ec9ff, #9fe2ff);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* floating clouds */
+    .hero::before,
+    .hero::after {
+        content: "";
+        position: absolute;
+        background: rgba(255, 255, 255, 0.55);
+        border-radius: 50%;
+        animation: floatClouds 18s infinite linear;
+    }
+
+    .hero::before {
+        width: 250px;
+        height: 80px;
+        top: 20%;
+        left: -200px;
+    }
+
+    .hero::after {
+        width: 180px;
+        height: 60px;
+        bottom: 15%;
+        right: -150px;
+    }
+
+@keyframes floatClouds {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+/* text styling */
+.hero-content h1 {
+    font-size: 3.2rem;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.25);
+}
+
+.hero-content p {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: #ffcb05;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s ease;
+    border: 3px solid #2a75bb;
+}
+
+    .btn:hover {
+        background: #ffe066;
+    }
+
+
+/* INTRO SECTION */
+.intro {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+    .intro h2 {
+        font-size: 2.2rem;
+        color: #2a75bb;
+    }
+
+
+/* WHAT'S NEW */
+.whats-new {
+    padding: 40px 20px;
+}
+
+    .whats-new h2 {
+        color: #ff414d;
+        text-shadow: 1px 1px 3px rgba(255,0,0,0.15);
+    }
+
+.new-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.new-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    border: 3px solid #ffcb05;
+    transition: transform 0.2s ease;
+    margin-bottom: 10px;
+}
+
+    .new-card:hover {
+        transform: scale(1.05);
+    }
+
+    .new-card img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+
+/* FEATURED SECTION */
+.featured {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+    .featured h2 {
+        color: #2a75bb;
+    }
+
+.card-slider {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    width: 250px;
+    border: 3px solid #3b4cca;
+    transition: transform 0.2s ease;
+}
+
+    .card-item:hover {
+        transform: scale(1.05);
+    }
+
+    .card-item img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+
+.collection {
+    padding: 50px 20px;
+    max-width: 1000px; /* 4 cards x 150px + gaps */
+    margin: auto;
+}
+
+    .collection h2 {
+        color: #2a75bb;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px); /* exactly 4 cards per row */
+    gap: 20px; /* space between cards */
+    justify-content: center; /* center grid in container */
+}
+
+.collection-card {
+    width: 150px;
+    height: 210px; /* Pokémon card size */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    border: 3px solid #ffcb05;
+    text-align: center;
+    padding: 5px;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+    .collection-card:hover {
+        transform: scale(1.05);
+    }
+
+    .collection-card img {
+        width: 100%;
+        height: auto; /* keeps aspect ratio */
+        border-radius: 8px;
+        margin-bottom: 5px;
+    }
+
+    .collection-card h3 {
+        font-size: 1rem;
+        color: #2a75bb;
+        margin: 3px 0;
+    }
+
+/* POPUP BACKGROUND */
+.card-popup {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.popup-content {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px; /* enlarged card size */
+    max-width: 90%;
+    animation: scaleUp 0.3s ease forwards;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+    .popup-content img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+    .popup-content h3 {
+        color: #2a75bb;
+        font-size: 1.5rem;
+    }
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ff414d;
+    font-weight: bold;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
